@@ -14,10 +14,12 @@ import { getLanguageIcon, type SupportedLanguage } from "./languageIcons.js";
  * Props for the LanguageTab component.
  *
  * @property language - The programming language identifier (e.g., "javascript", "python", "go")
+ * @property label - Optional custom label to display instead of the language name
  * @property children - The content to display inside the tab (typically code blocks)
  */
 export interface LanguageTabProps extends ComponentPropsWithRef<"div"> {
   language: SupportedLanguage | (string & {});
+  label?: string;
   children: ReactNode;
 }
 
@@ -29,9 +31,17 @@ export interface LanguageTabProps extends ComponentPropsWithRef<"div"> {
  *
  * @example
  * ```tsx
+ * // Basic usage with default label
  * <LanguageTab language="javascript">
  *   ```js
  *   console.log('Hello');
+ *   ```
+ * </LanguageTab>
+ *
+ * // With custom label
+ * <LanguageTab language="bun" label="TypeScript (Bun)">
+ *   ```ts
+ *   console.log('Hello from Bun');
  *   ```
  * </LanguageTab>
  * ```
@@ -56,6 +66,7 @@ export interface LanguageTabsProps {
 
 interface LanguageInfo {
   language: string;
+  label: string;
   icon: ReactNode;
 }
 
@@ -68,12 +79,14 @@ function getLanguagesFromChildren(
     (child) => {
       if (isValidElement(child) && child.props.language) {
         const language = child.props.language;
+        const label = child.props.label || language;
         return {
           language,
+          label,
           icon: getLanguageIcon(language, { isDark }),
         };
       }
-      return { language: "", icon: null };
+      return { language: "", label: "", icon: null };
     },
   ).filter((item: LanguageInfo): item is LanguageInfo => item.language !== "");
 }
@@ -119,7 +132,7 @@ export function LanguageTabs({
   return (
     <Tabs
       groupId={groupId ?? "language-tabs"}
-      values={languages.map(({ language, icon }) => (
+      values={languages.map(({ language, label, icon }) => (
         <div
           key={language}
           style={{
@@ -129,7 +142,7 @@ export function LanguageTabs({
           }}
         >
           {icon}
-          <span style={{ marginLeft: 6, marginBottom: 2 }}>{language}</span>
+          <span style={{ marginLeft: 6, marginBottom: 2 }}>{label}</span>
         </div>
       ))}
     >
