@@ -1,0 +1,300 @@
+import { LanguageTabs, LanguageTab } from "rspress-language-tabs";
+
+# Language Tabs Test Project
+
+Welcome to the test project for **rspress-language-tabs**!
+
+## Basic Example
+
+Here's a simple example with multiple programming languages:
+
+<LanguageTabs>
+  <LanguageTab language="javascript">
+  ```js 
+    console.log('Hello, World!'); 
+  ```
+  </LanguageTab>
+  <LanguageTab language="typescript">
+  ```ts
+   const greeting: string = 'Hello, World!'; console.log(greeting);
+  ```
+  </LanguageTab>
+  <LanguageTab language="python">
+  ```python
+   print('Hello, World!')
+  ```
+  </LanguageTab>
+  <LanguageTab language="go">
+    ```go
+     package main import "fmt" func main() {fmt.Println("Hello, World!")}
+    ```
+  </LanguageTab>
+
+  <LanguageTab language="foo">
+    ```go
+     package main import "fmt" func main() {fmt.Println("Hello, World!")}
+    ```
+  </LanguageTab>
+</LanguageTabs>
+
+## Features
+
+- ✅ Automatic language icons
+- ✅ Tab switching
+- ✅ Support for 40+ languages
+- ✅ TypeScript support
+
+## More Examples
+
+### System Programming Languages
+
+<LanguageTabs>
+  <LanguageTab language="rust">
+  ```rust
+  fn main() {
+      let message = "Hello from Rust!";
+      println!("{}", message);
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="c">
+  ```c
+  #include <stdio.h>
+  
+  int main() {
+      printf("Hello from C!\n");
+      return 0;
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="cpp">
+  ```cpp
+  #include <iostream>
+  
+  int main() {
+      std::cout << "Hello from C++!" << std::endl;
+      return 0;
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="zig">
+  ```zig
+  const std = @import("std");
+  
+  pub fn main() !void {
+      std.debug.print("Hello from Zig!\n", .{});
+  }
+  ```
+  </LanguageTab>
+</LanguageTabs>
+
+### Web Development
+
+<LanguageTabs>
+  <LanguageTab language="javascript">
+  ```js
+  async function fetchData() {
+      const response = await fetch('https://api.example.com/data');
+      const data = await response.json();
+      return data;
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="typescript">
+  ```ts
+  interface ApiResponse {
+      id: number;
+      name: string;
+  }
+  
+  async function fetchData(): Promise<ApiResponse[]> {
+      const response = await fetch('https://api.example.com/data');
+      const data: ApiResponse[] = await response.json();
+      return data;
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="php">
+  ```php
+  <?php
+  function fetchData() {
+      $ch = curl_init('https://api.example.com/data');
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      $response = curl_exec($ch);
+      curl_close($ch);
+      return json_decode($response, true);
+  }
+  ?>
+  ```
+  </LanguageTab>
+</LanguageTabs>
+
+### Scripting Languages
+
+<LanguageTabs>
+  <LanguageTab language="python">
+  ```python
+  def greet(name):
+      return f"Hello, {name}!"
+  
+  print(greet("World"))
+  ```
+  </LanguageTab>
+  <LanguageTab language="ruby">
+  ```ruby
+  def greet(name)
+    "Hello, #{name}!"
+  end
+  
+  puts greet("World")
+  ```
+  </LanguageTab>
+  <LanguageTab language="perl">
+  ```perl
+  sub greet {
+      my $name = shift;
+      return "Hello, $name!";
+  }
+  
+  print greet("World") . "\n";
+  ```
+  </LanguageTab>
+  <LanguageTab language="lua">
+  ```lua
+  function greet(name)
+      return "Hello, " .. name .. "!"
+  end
+  
+  print(greet("World"))
+  ```
+  </LanguageTab>
+</LanguageTabs>
+
+### Shell Scripting
+
+<LanguageTabs>
+  <LanguageTab language="bash">
+    ```bash #!/bin/bash for file in *.txt; do echo "Processing: $file" wc -l "$file" done ```
+  </LanguageTab>
+  <LanguageTab language="shell">
+    ```sh #!/bin/sh for file in *.txt; do echo "Processing: $file" wc -l "$file" done ```
+  </LanguageTab>
+</LanguageTabs>
+
+### JVM Languages
+
+<LanguageTabs>
+  <LanguageTab language="java">
+  ```java
+  public class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("Hello from Java!");
+      }
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="kotlin">
+  ```kotlin
+  fun main() {
+      println("Hello from Kotlin!")
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="scala">
+  ```scala
+  object HelloWorld {
+      def main(args: Array[String]): Unit = {
+          println("Hello from Scala!")
+      }
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="groovy">
+  ```groovy
+  println "Hello from Groovy!"
+  ```
+  </LanguageTab>
+</LanguageTabs>
+
+### Functional Languages
+
+<LanguageTabs>
+  <LanguageTab language="haskell">```haskell main :: IO () main = putStrLn "Hello from Haskell!" ```</LanguageTab>
+  <LanguageTab language="ocaml">```ocaml let () = print_endline "Hello from OCaml!" ```</LanguageTab>
+  <LanguageTab language="elixir">
+    ```elixir defmodule Hello do def world do IO.puts "Hello from Elixir!" end end Hello.world() ```
+  </LanguageTab>
+  <LanguageTab language="clojure">```clojure (println "Hello from Clojure!") ```</LanguageTab>
+</LanguageTabs>
+
+### Data & Config Formats
+
+<LanguageTabs>
+  <LanguageTab language="json">
+  ```json
+  {
+    "name": "my-app",
+    "version": "1.0.0",
+    "dependencies": {
+      "react": "^18.0.0"
+    }
+  }
+  ```
+  </LanguageTab>
+  <LanguageTab language="yaml">
+  ```yaml
+  name: my-app
+  version: 1.0.0
+  dependencies:
+    react: ^18.0.0
+  ```
+  </LanguageTab>
+  <LanguageTab language="toml">
+  ```toml
+  name = "my-app"
+  version = "1.0.0"
+  
+  [dependencies]
+  react = "^18.0.0"
+  ```
+  </LanguageTab>
+</LanguageTabs>
+
+### Markup Languages
+
+<LanguageTabs>
+  <LanguageTab language="html">
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Hello World</title>
+    </head>
+    <body>
+      <h1>Hello from HTML!</h1>
+    </body>
+  </html>
+  ```
+  </LanguageTab>
+  <LanguageTab language="markdown">
+  ```markdown
+  # Hello from Markdown!
+  
+  This is a **bold** statement.
+  
+  - Item 1
+  - Item 2
+  ```
+  </LanguageTab>
+</LanguageTabs>
+
+### Fallback Icon Test
+
+When a language isn't recognized, a generic code icon is displayed:
+
+<LanguageTabs>
+  <LanguageTab language="javascript">```js console.log('JavaScript - has icon'); ```</LanguageTab>
+  <LanguageTab language="unknown-language">
+    ``` This language doesn't have an icon, so it shows a generic code icon ```
+  </LanguageTab>
+</LanguageTabs>

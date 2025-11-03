@@ -1,0 +1,138 @@
+import { LanguageTabs, LanguageTab } from "rspress-language-tabs";
+
+# More Examples
+
+## Web Development Languages
+
+<LanguageTabs>
+  <LanguageTab language="javascript">
+    ```js
+    // Fetch data from an API
+    async function fetchData() {
+      const response = await fetch('https://api.example.com/data');
+      const data = await response.json();
+      return data;
+    }
+    ```
+  </LanguageTab>
+  <LanguageTab language="typescript">
+    ```ts
+    // Fetch data from an API with types
+    interface ApiResponse {
+      id: number;
+      name: string;
+    }
+    
+    async function fetchData(): Promise<ApiResponse[]> {
+      const response = await fetch('https://api.example.com/data');
+      const data: ApiResponse[] = await response.json();
+      return data;
+    }
+    ```
+  </LanguageTab>
+  <LanguageTab language="php">
+    ```php
+    <?php
+    // Fetch data from an API
+    $ch = curl_init('https://api.example.com/data');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    $data = json_decode($response, true);
+    curl_close($ch);
+    ?>
+    ```
+  </LanguageTab>
+</LanguageTabs>
+
+## System Programming
+
+<LanguageTabs>
+  <LanguageTab language="rust">
+    ```rust
+    fn main() {
+        let numbers = vec![1, 2, 3, 4, 5];
+        let sum: i32 = numbers.iter().sum();
+        println!("Sum: {}", sum);
+    }
+    ```
+  </LanguageTab>
+  <LanguageTab language="c">
+    ```c
+    #include <stdio.h>
+    
+    int main() {
+        int numbers[] = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int i = 0; i < 5; i++) {
+            sum += numbers[i];
+        }
+        printf("Sum: %d\n", sum);
+        return 0;
+    }
+    ```
+  </LanguageTab>
+  <LanguageTab language="cpp">
+    ```cpp
+    #include <iostream>
+    #include <vector>
+    #include <numeric>
+    
+    int main() {
+        std::vector<int> numbers = {1, 2, 3, 4, 5};
+        int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
+        std::cout << "Sum: " << sum << std::endl;
+        return 0;
+    }
+    ```
+  </LanguageTab>
+</LanguageTabs>
+
+## Scripting & Shell
+
+<LanguageTabs>
+  <LanguageTab language="bash">
+    ```bash #!/bin/bash # List all files in current directory for file in *; do echo "File: $file" done ```
+  </LanguageTab>
+  <LanguageTab language="python">
+    ```python import os # List all files in current directory for file in os.listdir('.'): print(f"File: {file}") ```
+  </LanguageTab>
+  <LanguageTab language="ruby">
+    ```ruby # List all files in current directory Dir.glob('*').each do |file| puts "File: #{file}" end ```
+  </LanguageTab>
+</LanguageTabs>
+
+## Data & Config Formats
+
+<LanguageTabs>
+  <LanguageTab language="json">
+    ```json
+    {
+      "name": "Example Config",
+      "version": "1.0.0",
+      "settings": {
+        "enabled": true,
+        "timeout": 5000
+      }
+    }
+    ```
+  </LanguageTab>
+  <LanguageTab language="yaml">
+    ```yaml
+    name: Example Config
+    version: 1.0.0
+    settings:
+      enabled: true
+      timeout: 5000
+    ```
+  </LanguageTab>
+  <LanguageTab language="toml">
+    ```toml
+    name = "Example Config"
+    version = "1.0.0"
+    
+    [settings]
+    enabled = true
+    timeout = 5000
+    ```
+  </LanguageTab>
+</LanguageTabs>
