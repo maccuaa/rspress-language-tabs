@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import {
   type SimpleIcon,
   siApachegroovy,
+  siBun,
   siC,
   siClojure,
   siCplusplus,
@@ -141,6 +142,7 @@ const languageToIconMap = {
   js: siJavascript,
   typescript: siTypescript,
   ts: siTypescript,
+  bun: siBun,
   python: siPython,
   py: siPython,
   java: siOpenjdk,

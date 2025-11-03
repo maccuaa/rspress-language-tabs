@@ -30,6 +30,19 @@ import { LanguageTabs, LanguageTab } from "rspress-language-tabs";
     }
     ```
   </LanguageTab>
+  <LanguageTab language="bun">
+    ```ts
+    // Bun native HTTP server
+    const server = Bun.serve({
+      port: 3000,
+      fetch(request) {
+        return new Response("Hello from Bun!");
+      },
+    });
+    
+    console.log(`Listening on http://localhost:${server.port}`);
+    ```
+  </LanguageTab>
   <LanguageTab language="php">
     ```php
     <?php
