@@ -1,7 +1,7 @@
 {
   "name": "rspress-language-tabs",
   "description": "Rspress component library for tabbed code examples with programming language logos.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Andrew MacCuaig <andrewmaccuaig@gmail.com>",
   "repository": {
