@@ -1,10 +1,15 @@
 # rspress-language-tabs
 
+[![npm version](https://img.shields.io/npm/v/rspress-language-tabs.svg?style=flat-square)](https://www.npmjs.com/package/rspress-language-tabs)
+[![npm downloads](https://img.shields.io/npm/dm/rspress-language-tabs.svg?style=flat-square)](https://www.npmjs.com/package/rspress-language-tabs)
+[![license](https://img.shields.io/npm/l/rspress-language-tabs.svg?style=flat-square)](https://github.com/maccuaa/rspress-language-tabs/blob/main/LICENSE)
+
 An Rspress v2 component library for creating tabbed code examples with programming language icons from [Simple Icons](https://simpleicons.org/).
 
 ## Features
 
 - 🎨 **Language Icons** - Automatically displays icons for 40+ programming languages
+- 🌓 **Dark Mode Support** - Icons automatically adjust colors for light/dark themes
 - 🔄 **Easy to Use** - Simple MDX syntax similar to Rspress's built-in components
 - 🎯 **TypeScript Support** - Fully typed with TypeScript
 - 📦 **Zero Config** - Works out of the box
@@ -115,13 +120,14 @@ interface LanguageTabsProps {
 }
 ```
 
-### `<Tab>`
+### `<LanguageTab>`
 
 Individual tab component that holds code for a specific language.
 
 ```tsx
-interface TabProps {
+interface LanguageTabProps {
   language: string;
+  label?: string;
   children: ReactNode;
 }
 ```
@@ -129,6 +135,7 @@ interface TabProps {
 **Props:**
 
 - `language` (required): The programming language name. Case-insensitive. Use common names like "javascript", "python", "go", etc.
+- `label` (optional): Custom label to display instead of the capitalized language name.
 - `children` (required): The content to display in the tab. Typically a code block.
 
 ## Examples
@@ -216,25 +223,24 @@ The plugin supports common aliases for languages:
 - `kt` → Kotlin
 - `sh` → Shell/Bash
 
-## Customization
+## Requirements
 
-### Custom Icons
+This package requires the following peer dependencies:
 
-If you need to use the icon utility directly:
+- **@rspress/core**: `^2.0.0` (v2.0.0-beta.35 or higher)
+- **React**: `^18.0.0` or `^19.0.0`
 
-```tsx
-import { getLanguageIcon } from "rspress-language-tabs";
+Make sure these are installed in your project:
 
-const icon = getLanguageIcon("javascript", { size: 24, color: "#f7df1e" });
+```bash
+npm install @rspress/core react
 ```
-
-## Browser Support
-
-This package supports all modern browsers that support ES2021+ features.
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+For detailed contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License
 
@@ -244,37 +250,3 @@ MIT © Andrew MacCuaig
 
 - Icons provided by [Simple Icons](https://simpleicons.org/)
 - Inspired by Rspress's [PackageManagerTabs](https://rspress.dev/guide/default-theme/builtin-components#packagemanagertabs) component
-
-Use Figtree as the default font in your Rspress website.
-
-<!-- <p>
-  <a href="https://npmjs.com/package/rspress-plugin-font-open-sans">
-   <img src="https://img.shields.io/npm/v/rspress-plugin-font-open-sans?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" />
-  </a>
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" />
-</p> -->
-
-## About
-
-Figtree is a clean yet friendly geometric sans serif font for usage in web and mobile apps.
-
-See [Google Fonts - Figtree](https://fonts.google.com/specimen/Figtree/about)
-
-## Usage
-
-Install:
-
-```bash
-npm add rspress-plugin-font-figtree -D
-```
-
-Add plugin to your `rspress.config.ts`:
-
-```ts
-// rspress.config.ts
-import { pluginFontFigtree } from "rspress-plugin-font-figtree";
-
-export default {
-  plugins: [pluginFontFigtree()],
-};
-```
