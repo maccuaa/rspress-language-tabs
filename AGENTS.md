@@ -175,18 +175,24 @@ const languageToIconMap = {
 
 ### Workflows
 
-1. **build.yaml**: Runs on PRs, pushes to main, and manual dispatch
+1. **build.yaml**: Runs on PRs and pushes to main
    - Lints commit messages
    - Checks formatting (both Biome and Prettier)
    - Runs Biome linter
    - Builds the plugin
    - Verifies package contents
-   - **On push to main only**: Builds and deploys website to GitHub Pages at https://maccuaa.github.io/rspress-language-tabs/
 
 2. **release-please.yml**: Automated releases
    - Creates release PRs based on conventional commits
    - Auto-publishes to npm when merged
    - Uses npm Trusted Publishing (OIDC, no tokens needed)
+
+3. **deploy-website.yml**: Deploys documentation to GitHub Pages
+   - Triggers on pushes to main or manual workflow dispatch
+   - Builds the plugin first
+   - Builds the website using Rspress
+   - Deploys to GitHub Pages at https://maccuaa.github.io/rspress-language-tabs/
+   - Uses GitHub Pages environment with OIDC authentication
 
 ### Release Process
 
