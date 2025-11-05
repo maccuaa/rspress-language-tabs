@@ -3,13 +3,13 @@
   "extends": [
     "config:best-practices",
     ":rebaseStalePrs",
-    ":preserveSemverRanges"
+    ":preserveSemverRanges",
+    "security:minimumReleaseAgeNpm"
   ],
   "timezone": "America/New_York",
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
   },
-  "minimumReleaseAge": "3 days",
   "osvVulnerabilityAlerts": true
 }
