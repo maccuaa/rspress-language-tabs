@@ -1,8 +1,8 @@
 {
-  "name": "rspress-language-tabs-test",
+  "name": "rspress-language-tabs-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Test project for rspress-language-tabs",
+  "description": "Documentation website for rspress-language-tabs",
   "scripts": {
     "dev": "rspress dev",
     "build": "rspress build",

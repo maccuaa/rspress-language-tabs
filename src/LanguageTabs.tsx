@@ -12,14 +12,19 @@ import { getLanguageIcon, type SupportedLanguage } from "./languageIcons.js";
 
 /**
  * Props for the LanguageTab component.
- *
- * @property language - The programming language identifier (e.g., "javascript", "python", "go")
- * @property label - Optional custom label to display instead of the language name
- * @property children - The content to display inside the tab (typically code blocks)
  */
 export interface LanguageTabProps extends ComponentPropsWithRef<"div"> {
+  /**
+   * The programming language identifier (e.g., "javascript", "python", "go")
+   */
   language: SupportedLanguage | (string & {});
+  /**
+   * Optional custom label to display instead of the language name
+   */
   label?: string;
+  /**
+   * The content to display inside the tab (typically code blocks)
+   */
   children: ReactNode;
 }
 
@@ -55,12 +60,16 @@ export function LanguageTab({
 
 /**
  * Props for the LanguageTabs component.
- *
- * @property children - One or more LanguageTab components to display as language options
- * @property groupId - Optional ID to sync tab selections across multiple LanguageTabs components. When multiple LanguageTabs use the same groupId, selecting a language in one will automatically select it in all others (default: "language-tabs")
  */
 export interface LanguageTabsProps {
+  /**
+   * One or more LanguageTab components to display as language options
+   */
   children: ReactNode;
+  /**
+   * Optional ID to sync tab selections across multiple LanguageTabs components. When multiple LanguageTabs use the same groupId, selecting a language in one will automatically select it in all others
+   * @default "language-tabs"
+   */
   groupId?: string;
 }
 

@@ -23,7 +23,7 @@
   "workspaces": {
     "packages": [
       ".",
-      "test-project"
+      "website"
     ],
     "catalog": {
       "@rspress/core": "2.0.0-beta.35"
@@ -46,8 +46,13 @@
     "build": "rslib build",
     "bump": "bunx bumpp",
     "dev": "rslib build --watch",
-    "lint": "biome ci .",
-    "lint:commits": "commitlint --from HEAD~10 --to HEAD --verbose"
+    "lint": "bun run lint:js && bun run lint:md",
+    "lint:js": "biome ci .",
+    "lint:commits": "commitlint --from HEAD~10 --to HEAD --verbose",
+    "lint:md": "prettier --check '**/*.{md,mdx}'",
+    "format": "bun run format:biome && bun run format:prettier",
+    "format:biome": "biome format --write .",
+    "format:prettier": "prettier --write '**/*.{md,mdx}'"
   },
   "dependencies": {
     "simple-icons": "^15.18.0"
@@ -58,14 +63,15 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
     "@rslib/core": "0.15.1",
     "@rspress/core": "catalog:",
     "@tsconfig/node-lts": "22.0.2",
     "@types/node": "24.7.2",
-    "@types/react": "^18.3.12",
-    "react": "^18.3.1",
+    "@types/react": "18.3.12",
+    "prettier": "3.6.2",
+    "react": "18.3.1",
     "typescript": "5.9.3"
   }
 }

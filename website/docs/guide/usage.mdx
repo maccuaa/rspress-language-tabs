@@ -1,0 +1,162 @@
+import { LanguageTabs, LanguageTab } from "rspress-language-tabs";
+
+# Usage Guide
+
+Learn how to use `rspress-language-tabs` to create beautiful tabbed code examples.
+
+## Basic Usage
+
+The most basic usage involves importing the components and wrapping your code blocks.
+
+First, import the components at the top of your MDX file:
+
+```mdx
+import { LanguageTabs, LanguageTab } from "rspress-language-tabs";
+```
+
+Then use them to create tabs:
+
+<LanguageTabs>
+  <LanguageTab language="javascript">
+
+```js
+console.log("Hello, World!");
+```
+
+  </LanguageTab>
+  <LanguageTab language="python">
+
+```python
+print("Hello, World!")
+```
+
+  </LanguageTab>
+</LanguageTabs>
+
+## Language Prop
+
+The `language` prop determines which icon to display. It's **case-insensitive** and supports common aliases.
+
+For example, these are all equivalent:
+
+- `language="javascript"` or `language="js"`
+- `language="typescript"` or `language="ts"`
+- `language="python"` or `language="py"`
+
+See the full list of [Supported Languages](/guide/supported-languages).
+
+## Custom Labels
+
+Use the `label` prop to display custom text while keeping the correct language icon:
+
+<LanguageTabs>
+  <LanguageTab language="bun" label="TypeScript (Bun)">
+
+```ts
+const server = Bun.serve({
+  port: 3000,
+  fetch() {
+    return new Response("Hello from Bun!");
+  },
+});
+```
+
+  </LanguageTab>
+  <LanguageTab language="typescript" label="TypeScript (Node.js)">
+
+```ts
+import express from "express";
+const app = express();
+app.listen(3000);
+```
+
+  </LanguageTab>
+</LanguageTabs>
+
+In this example, both tabs show TypeScript code, but with different runtime labels.
+
+## Tab Syncing
+
+Use the `groupId` prop to synchronize tab selections across multiple `LanguageTabs` components.
+
+When you select a language in one group, all other groups with the same `groupId` will automatically switch to that language too!
+
+<LanguageTabs groupId="demo-sync">
+  <LanguageTab language="javascript">
+
+```js
+// First code block
+console.log("JavaScript");
+```
+
+  </LanguageTab>
+  <LanguageTab language="python">
+
+```python
+# First code block
+print("Python")
+```
+
+  </LanguageTab>
+</LanguageTabs>
+
+<LanguageTabs groupId="demo-sync">
+  <LanguageTab language="javascript">
+
+```js
+// Second code block - synced!
+console.log("Still JavaScript");
+```
+
+  </LanguageTab>
+  <LanguageTab language="python">
+
+```python
+# Second code block - synced!
+print("Still Python")
+```
+
+  </LanguageTab>
+</LanguageTabs>
+
+Try clicking the tabs above - they stay in sync!
+
+## Fallback Icon
+
+If a language isn't recognized, a generic code icon `</>` is displayed:
+
+<LanguageTabs>
+  <LanguageTab language="javascript">
+
+```js
+console.log("Known language - has icon");
+```
+
+  </LanguageTab>
+  <LanguageTab language="unknown-language">
+
+```
+Unknown language - generic icon
+```
+
+  </LanguageTab>
+</LanguageTabs>
+
+## Best Practices
+
+### Use Descriptive Code
+
+Include comments and meaningful variable names in your code examples to make them easier to understand.
+
+### Keep Examples Focused
+
+Each tab should demonstrate the same concept in different languages for consistency.
+
+### Provide Context
+
+Add explanatory text before code examples to help users understand what they're looking at.
+
+## Next Steps
+
+- View [Supported Languages](/guide/supported-languages) for the complete list
+- Explore the source code on [GitHub](https://github.com/maccuaa/rspress-language-tabs)

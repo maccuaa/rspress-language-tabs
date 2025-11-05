@@ -1,0 +1,74 @@
+import { PackageManagerTabs } from "@theme";
+import { LanguageTab, LanguageTabs } from "rspress-language-tabs";
+
+# Installation
+
+## Prerequisites
+
+Before installing `rspress-language-tabs`, make sure you have an Rspress v2 project set up.
+
+### Requirements
+
+- **@rspress/core**: `^2.0.0` (v2.0.0-beta.35 or higher)
+- **React**: `^18.0.0` or `^19.0.0`
+
+## Install the Package
+
+Install `rspress-language-tabs` using your preferred package manager:
+
+<PackageManagerTabs command="add rspress-language-tabs" />
+
+## Verify Installation
+
+After installation, create a test file to verify it's working.
+
+Import the components at the top of any MDX file:
+
+```typescript
+import { LanguageTabs, LanguageTab } from "rspress-language-tabs";
+```
+
+Then use them in your content to create tabbed code blocks with language icons.
+
+````mdx
+<LanguageTabs>
+  <LanguageTab language="javascript" label="JavaScript">
+    ```javascript
+    console.log("Hello, World!");
+    ```
+  </LanguageTab>
+  <LanguageTab language="python" label="Python">
+    ```python
+    print("Hello, World!")
+    ```
+  </LanguageTab>
+</LanguageTabs>
+````
+
+Start your Rspress development server:
+
+```bash
+npm run dev
+```
+
+The components should render correctly with language icons displayed in the tabs!
+
+<LanguageTabs>
+  <LanguageTab language="javascript" label="JavaScript">
+    ```javascript
+    console.log("Hello, World!");
+    ```
+  </LanguageTab>
+  <LanguageTab language="python" label="Python">
+    ```python
+    print("Hello, World!")
+    ```
+  </LanguageTab>
+</LanguageTabs>
+
+## Next Steps
+
+Now that you have `rspress-language-tabs` installed, learn how to use it:
+
+- [Usage Guide](/guide/usage) - Learn the fundamentals
+- [Supported Languages](/guide/supported-languages) - See all available languages
