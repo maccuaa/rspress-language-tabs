@@ -32,6 +32,7 @@ jobs:
       - name: Build website
         run: |
           cd website
+          bun install --frozen-lockfile
           bun run build
 
       - name: Upload artifact
