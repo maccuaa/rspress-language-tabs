@@ -30,15 +30,13 @@ jobs:
         run: bun run build
 
       - name: Build website
-        run: |
-          cd website
-          bun install --frozen-lockfile
-          bun run build
+        working-directory: packages/website
+        run: bun run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: ./website/doc_build
+          path: ./packages/website/doc_build
 
   deploy:
     name: Deploy to GitHub Pages

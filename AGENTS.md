@@ -27,6 +27,7 @@ This ensures future AI assistants have accurate context about the project.
 - **Package Manager**: Bun
 - **Linter/Formatter**: Biome
 - **Target**: Rspress v2.0.0-beta.35+
+- **Structure**: Monorepo with Bun workspaces
 
 ## Key Features
 
@@ -36,6 +37,26 @@ This ensures future AI assistants have accurate context about the project.
 4. **Zero Config**: Works out of the box in Rspress projects
 
 ## Architecture
+
+### Monorepo Structure
+
+```
+rspress-language-tabs/
+├── packages/
+│   ├── rspress-language-tabs/    # Main plugin package (published to npm)
+│   │   ├── src/                   # Plugin source code
+│   │   ├── dist/                  # Built output
+│   │   ├── package.json           # Plugin package config
+│   │   ├── tsconfig.json          # TypeScript config
+│   │   └── rslib.config.ts        # Build config
+│   └── website/                   # Documentation website
+│       ├── docs/                  # Documentation content
+│       ├── rspress.config.ts      # Rspress config
+│       └── package.json           # Website dependencies
+├── package.json                   # Monorepo root (private)
+├── bun.lock                       # Lockfile for all packages
+└── .github/workflows/             # CI/CD workflows
+```
 
 ### Component Structure
 
@@ -120,16 +141,23 @@ Breaking changes: Add `!` after type (e.g., `feat!: change API`)
 
 ### Dependency Management
 
+This is a **Bun workspace monorepo** following conventional patterns:
+
+- Root `package.json` is private and manages the workspace
+- Each package in `packages/` is self-contained
 - Use **Bun catalog** for shared dependencies like `@rspress/core`
 - Catalog defined in root `package.json`:
   ```json
   "workspaces": {
+    "packages": ["packages/*"],
     "catalog": {
       "@rspress/core": "2.0.0-beta.35"
     }
   }
   ```
-- Install deps: `bun add <package>`
+- Website uses `"rspress-language-tabs": "workspace:*"` to reference the plugin
+- Install deps from root: `bun install` (installs all workspaces)
+- Install package-specific deps: `cd packages/<package> && bun add <dep>`
 - Update catalog version in one place to update everywhere
 
 ### Testing
@@ -137,10 +165,13 @@ Breaking changes: Add `!` after type (e.g., `feat!: change API`)
 Manual testing via `website`:
 
 ```bash
-bun run build              # Build plugin
-cd website
-bun run dev               # Test at http://localhost:3000
+bun install                         # Install all workspace dependencies
+bun run build                       # Build plugin
+cd packages/website
+bun run dev                         # Test at http://localhost:3000
 ```
+
+**Note**: The website uses `workspace:*` to automatically link to the plugin package. After building the plugin, the website can import and use it directly.
 
 Always test:
 
@@ -152,12 +183,13 @@ Always test:
 ### Adding New Languages
 
 1. Check icon exists: https://simpleicons.org/
-2. Import from simple-icons
+2. Import from simple-icons in `packages/rspress-language-tabs/src/languageIcons.tsx`
 3. Add to `languageToIconMap`
 4. Add common aliases
 5. Add to `SupportedLanguage` type
-6. Test in website
-7. Update README and CONTRIBUTING.md
+6. Build plugin: `bun run build`
+7. Test in website: `cd packages/website && bun run dev`
+8. Update README and CONTRIBUTING.md
 
 Example:
 
@@ -179,18 +211,19 @@ const languageToIconMap = {
    - Lints commit messages
    - Checks formatting (both Biome and Prettier)
    - Runs Biome linter
-   - Builds the plugin
+   - Builds the plugin from `packages/rspress-language-tabs`
    - Verifies package contents
 
 2. **release-please.yml**: Automated releases
    - Creates release PRs based on conventional commits
-   - Auto-publishes to npm when merged
+   - Tracks version in `packages/rspress-language-tabs/package.json`
+   - Auto-publishes to npm from `packages/rspress-language-tabs` when merged
    - Uses npm Trusted Publishing (OIDC, no tokens needed)
 
 3. **deploy-website.yml**: Deploys documentation to GitHub Pages
    - Triggers on pushes to main or manual workflow dispatch
    - Builds the plugin first
-   - Builds the website using Rspress
+   - Builds the website from `packages/website` (workspace dependency auto-resolves)
    - Deploys to GitHub Pages at https://maccuaa.github.io/rspress-language-tabs/
    - Uses GitHub Pages environment with OIDC authentication
 
@@ -210,12 +243,14 @@ const languageToIconMap = {
 
 ## Important Files
 
-- `src/languageIcons.tsx` - Icon utilities and mappings
-- `src/LanguageTabs.tsx` - Main components
+- `packages/rspress-language-tabs/src/languageIcons.tsx` - Icon utilities and mappings
+- `packages/rspress-language-tabs/src/LanguageTabs.tsx` - Main components
+- `packages/rspress-language-tabs/rslib.config.ts` - Plugin build configuration
+- `packages/rspress-language-tabs/package.json` - Plugin package config (published to npm)
+- `packages/website/` - Documentation website
 - `commitlint.config.js` - Commit validation (uses @commitlint/config-conventional)
 - `release-please-config.json` - Release automation config
 - `.release-please-manifest.json` - Current version tracking
-- `rslib.config.ts` - Build configuration
 - `biome.json` - Biome linter/formatter configuration
 - `.prettierrc` - Prettier configuration (Markdown/MDX only)
 

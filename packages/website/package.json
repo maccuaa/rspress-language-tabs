@@ -10,10 +10,6 @@
   },
   "dependencies": {
     "@rspress/core": "catalog:",
-    "rspress-language-tabs": "link:rspress-language-tabs"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0"
+    "rspress-language-tabs": "workspace:*"
   }
 }

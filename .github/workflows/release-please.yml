@@ -39,6 +39,8 @@ jobs:
       - run: bun run lint
       - run: bun run build
       - name: Verify package contents
+        working-directory: packages/rspress-language-tabs
         run: npm pack --dry-run
       - name: Publish to npm
+        working-directory: packages/rspress-language-tabs
         run: npm publish --provenance --access public

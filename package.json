@@ -1,51 +1,26 @@
 {
-  "name": "rspress-language-tabs",
-  "description": "Rspress component library for tabbed code examples with programming language logos.",
-  "version": "1.1.0",
+  "name": "rspress-language-tabs-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for rspress-language-tabs plugin and documentation",
   "license": "MIT",
   "author": "Andrew MacCuaig <andrewmaccuaig@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maccuaa/rspress-language-tabs.git"
   },
-  "bugs": {
-    "url": "https://github.com/maccuaa/rspress-language-tabs/issues"
-  },
-  "homepage": "https://github.com/maccuaa/rspress-language-tabs#readme",
-  "keywords": [
-    "rspress",
-    "components",
-    "tabs",
-    "code-examples",
-    "language-icons"
-  ],
-  "type": "module",
   "workspaces": {
     "packages": [
-      ".",
-      "website"
+      "packages/*"
     ],
     "catalog": {
       "@rspress/core": "2.0.0-beta.35"
     }
   },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
-    }
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "rslib build",
-    "bump": "bunx bumpp",
-    "dev": "rslib build --watch",
+    "build": "bun run --filter rspress-language-tabs build",
+    "build:all": "bun run --filter '*' build",
+    "dev": "bun run --filter rspress-language-tabs dev",
     "lint": "bun run lint:js && bun run lint:md",
     "lint:js": "biome ci .",
     "lint:commits": "commitlint --from-last-tag --to HEAD --verbose",
@@ -54,24 +29,10 @@
     "format:biome": "biome format --write .",
     "format:prettier": "prettier --write '**/*.{md,mdx}'"
   },
-  "dependencies": {
-    "simple-icons": "^15.18.0"
-  },
-  "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "@rspress/core": "^2.0.0"
-  },
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
-    "@rslib/core": "0.15.1",
-    "@rspress/core": "catalog:",
-    "@tsconfig/node-lts": "22.0.2",
-    "@types/node": "24.7.2",
-    "@types/react": "18.3.12",
-    "prettier": "3.6.2",
-    "react": "18.3.1",
-    "typescript": "5.9.3"
+    "prettier": "3.6.2"
   }
 }

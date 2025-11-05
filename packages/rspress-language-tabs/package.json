@@ -1,0 +1,56 @@
+{
+  "name": "rspress-language-tabs",
+  "description": "Rspress component library for tabbed code examples with programming language logos.",
+  "version": "1.1.0",
+  "license": "MIT",
+  "author": "Andrew MacCuaig <andrewmaccuaig@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maccuaa/rspress-language-tabs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maccuaa/rspress-language-tabs/issues"
+  },
+  "homepage": "https://github.com/maccuaa/rspress-language-tabs#readme",
+  "keywords": [
+    "rspress",
+    "components",
+    "tabs",
+    "code-examples",
+    "language-icons"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch"
+  },
+  "dependencies": {
+    "simple-icons": "^15.18.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "@rspress/core": "^2.0.0"
+  },
+  "devDependencies": {
+    "@rslib/core": "0.15.1",
+    "@rspress/core": "catalog:",
+    "@tsconfig/node-lts": "22.0.2",
+    "@types/node": "24.7.2",
+    "@types/react": "18.3.12",
+    "react": "18.3.1",
+    "typescript": "5.9.3"
+  }
+}
