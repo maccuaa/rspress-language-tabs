@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/maccuaa/rspress-language-tabs/compare/v1.1.0...v1.2.0) (2025-11-05)
+
+
+### Features
+
+* add deploy-website workflow for GitHub Pages and update AGENTS.md ([66cf380](https://github.com/maccuaa/rspress-language-tabs/commit/66cf380f4d0206b9731df7273a3a36129470b9ba))
+
+
+### Bug Fixes
+
+* ensure dependencies are installed before building the website ([d0940f9](https://github.com/maccuaa/rspress-language-tabs/commit/d0940f90f0bd89686c81eb37e864ba6dd3918c60))
+* update commit linting command to use from-last-tag for better accuracy ([37b890f](https://github.com/maccuaa/rspress-language-tabs/commit/37b890f9319f0d3f96babc30a280c14dd71bbea6))
+
 ## [1.1.0](https://github.com/maccuaa/rspress-language-tabs/compare/v1.0.0...v1.1.0) (2025-11-03)
 
 
