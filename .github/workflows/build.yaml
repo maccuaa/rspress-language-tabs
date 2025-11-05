@@ -34,7 +34,7 @@ jobs:
 
       - name: Lint commits (push)
         if: github.event_name == 'push'
-        run: bunx commitlint --from HEAD~1 --to HEAD --verbose
+        run: bun run lint:commits
 
       - run: bun run lint
       - run: bun run build
