@@ -11,5 +11,8 @@
     "automerge": true
   },
   "minimumReleaseAge": "3 days",
-  "osvVulnerabilityAlerts": true
+  "osvVulnerabilityAlerts": true,
+  "bun": {
+    "enabled": true
+  }
 }
