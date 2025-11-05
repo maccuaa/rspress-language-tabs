@@ -48,7 +48,7 @@
     "dev": "rslib build --watch",
     "lint": "bun run lint:js && bun run lint:md",
     "lint:js": "biome ci .",
-    "lint:commits": "commitlint --from HEAD~10 --to HEAD --verbose",
+    "lint:commits": "commitlint --from-last-tag --to HEAD --verbose",
     "lint:md": "prettier --check '**/*.{md,mdx}'",
     "format": "bun run format:biome && bun run format:prettier",
     "format:biome": "biome format --write .",
