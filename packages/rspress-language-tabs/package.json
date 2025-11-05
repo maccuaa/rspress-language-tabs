@@ -49,8 +49,8 @@
     "@rspress/core": "catalog:",
     "@tsconfig/node-lts": "22.0.2",
     "@types/node": "24.7.2",
-    "@types/react": "18.3.26",
-    "react": "18.3.1",
+    "@types/react": "19.2.2",
+    "react": "19.2.0",
     "typescript": "5.9.3"
   }
 }
