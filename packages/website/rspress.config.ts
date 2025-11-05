@@ -7,13 +7,6 @@ export default defineConfig({
   description:
     "Rspress v2 component library for tabbed code examples with language icons",
   themeConfig: {
-    nav: [
-      { text: "Guide", link: "/guide/installation" },
-      {
-        text: "GitHub",
-        link: "https://github.com/maccuaa/rspress-language-tabs",
-      },
-    ],
     sidebar: {
       "/guide/": [
         {
