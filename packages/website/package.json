@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@rspress/core": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "rspress-language-tabs": "workspace:*"
   }
 }

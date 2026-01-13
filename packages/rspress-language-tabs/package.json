@@ -50,7 +50,7 @@
     "@tsconfig/node-lts": "22.0.2",
     "@types/node": "24.10.0",
     "@types/react": "19.2.2",
-    "react": "19.2.0",
+    "react": "catalog:",
     "typescript": "5.9.3"
   }
 }
