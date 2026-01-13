@@ -9,13 +9,11 @@
     "type": "git",
     "url": "git+https://github.com/maccuaa/rspress-language-tabs.git"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "catalog": {
-      "@rspress/core": "2.0.0-beta.35"
-    }
+  "workspaces": [
+    "packages/*"
+  ],
+  "catalog": {
+    "@rspress/core": "2.0.0-beta.35"
   },
   "scripts": {
     "build": "bun run --filter rspress-language-tabs build",
