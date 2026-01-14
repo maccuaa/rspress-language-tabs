@@ -49,7 +49,7 @@
     "@rspress/core": "catalog:",
     "@tsconfig/node-lts": "22.0.4",
     "@types/node": "24.10.7",
-    "@types/react": "19.2.2",
+    "@types/react": "19.2.8",
     "react": "catalog:",
     "typescript": "5.9.3"
   }
