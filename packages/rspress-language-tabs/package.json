@@ -47,7 +47,7 @@
   "devDependencies": {
     "@rslib/core": "0.17.0",
     "@rspress/core": "catalog:",
-    "@tsconfig/node-lts": "22.0.2",
+    "@tsconfig/node-lts": "22.0.4",
     "@types/node": "24.10.0",
     "@types/react": "19.2.2",
     "react": "catalog:",
