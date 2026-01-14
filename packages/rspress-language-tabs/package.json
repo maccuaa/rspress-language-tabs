@@ -45,7 +45,7 @@
     "@rspress/core": "^2.0.0"
   },
   "devDependencies": {
-    "@rslib/core": "0.17.0",
+    "@rslib/core": "0.19.1",
     "@rspress/core": "catalog:",
     "@tsconfig/node-lts": "22.0.4",
     "@types/node": "24.10.7",
