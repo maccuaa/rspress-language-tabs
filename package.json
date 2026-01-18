@@ -33,6 +33,6 @@
     "@biomejs/biome": "2.3.11",
     "@commitlint/cli": "20.3.1",
     "@commitlint/config-conventional": "20.3.1",
-    "prettier": "3.7.4"
+    "prettier": "3.8.0"
   }
 }
