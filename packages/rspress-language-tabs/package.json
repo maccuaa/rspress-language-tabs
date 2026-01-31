@@ -48,7 +48,7 @@
     "@rslib/core": "0.19.3",
     "@rspress/core": "catalog:",
     "@tsconfig/node-lts": "24.0.0",
-    "@types/node": "25.0.10",
+    "@types/node": "25.1.0",
     "@types/react": "19.2.10",
     "react": "catalog:",
     "typescript": "5.9.3"
