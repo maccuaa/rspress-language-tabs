@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/maccuaa/rspress-language-tabs/compare/v1.1.0...v1.1.1) (2026-02-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency simple-icons to v16 ([#34](https://github.com/maccuaa/rspress-language-tabs/issues/34)) ([36e655c](https://github.com/maccuaa/rspress-language-tabs/commit/36e655c7cf55f91fb022aab0cfbfbc4d273aff2d))
+
 ## [1.1.0](https://github.com/maccuaa/rspress-language-tabs/compare/v1.0.0...v1.1.0) (2025-11-03)
 
 
