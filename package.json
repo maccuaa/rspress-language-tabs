@@ -30,7 +30,7 @@
     "format:prettier": "prettier --write '**/*.{md,mdx}'"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.5",
+    "@biomejs/biome": "2.4.6",
     "@commitlint/cli": "20.4.3",
     "@commitlint/config-conventional": "20.4.3",
     "prettier": "3.8.1"
