@@ -227,7 +227,7 @@ The plugin supports common aliases for languages:
 
 This package requires the following peer dependencies:
 
-- **@rspress/core**: `^2.0.0` (v2.0.0-beta.35 or higher)
+- **@rspress/core**: `^2.0.0`
 - **React**: `^18.0.0` or `^19.0.0`
 
 Make sure these are installed in your project:

@@ -299,7 +299,7 @@ This project uses Bun workspaces with a catalog for shared dependencies:
   "workspaces": {
     "packages": [".", "website"],
     "catalog": {
-      "@rspress/core": "2.0.0-beta.35"
+      "@rspress/core": "2.0.8"
     }
   }
 }

@@ -26,7 +26,7 @@ This ensures future AI assistants have accurate context about the project.
 - **Build Tool**: Rslib (Rspack-based)
 - **Package Manager**: Bun
 - **Linter/Formatter**: Biome
-- **Target**: Rspress v2.0.0-beta.35+
+- **Target**: Rspress v2.x
 - **Structure**: Monorepo with Bun workspaces
 
 ## Key Features
@@ -151,7 +151,7 @@ This is a **Bun workspace monorepo** following conventional patterns:
   "workspaces": {
     "packages": ["packages/*"],
     "catalog": {
-      "@rspress/core": "2.0.0-beta.35"
+      "@rspress/core": "2.0.8"
     }
   }
   ```

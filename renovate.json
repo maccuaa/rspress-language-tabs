@@ -10,5 +10,16 @@
     "enabled": true,
     "automerge": true
   },
-  "osvVulnerabilityAlerts": true
+  "osvVulnerabilityAlerts": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update Bun catalog dependencies in root package.json",
+      "fileMatch": ["^package\\.json$"],
+      "matchStrings": [
+        "\"catalog\":\\s*\\{[^}]*?\"(?<depName>[^\"]+)\":\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "npm"
+    }
+  ]
 }

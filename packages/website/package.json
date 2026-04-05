@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Documentation website for rspress-language-tabs",
+  "type": "module",
   "scripts": {
     "dev": "rspress dev",
     "build": "rspress build",
