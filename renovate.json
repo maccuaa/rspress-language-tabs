@@ -1,21 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "configMigration": true,
-  "extends": [
-    "config:best-practices",
-    "security:minimumReleaseAgeNpm",
-    ":automergeAll"
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true
-  },
-  "osvVulnerabilityAlerts": true,
+  "extends": ["github>maccuaa/renovate-config"],
   "customManagers": [
     {
       "customType": "regex",
       "description": "Update Bun catalog dependencies in root package.json",
-      "fileMatch": ["^package\\.json$"],
+      "managerFilePatterns": ["^package\\.json$"],
       "matchStrings": [
         "\"catalog\":\\s*\\{[^}]*?\"(?<depName>[^\"]+)\":\\s*\"(?<currentValue>[^\"]+)\""
       ],
