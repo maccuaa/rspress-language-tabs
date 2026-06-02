@@ -31,8 +31,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
-    "@commitlint/cli": "21.0.1",
-    "@commitlint/config-conventional": "21.0.1",
+    "@commitlint/cli": "21.0.2",
+    "@commitlint/config-conventional": "21.0.2",
     "prettier": "3.8.3"
   }
 }
