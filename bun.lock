@@ -6,7 +6,7 @@
       "name": "rspress-language-tabs-monorepo",
       "devDependencies": {
         "@biomejs/biome": "2.5.3",
-        "@commitlint/cli": "21.2.0",
+        "@commitlint/cli": "21.2.1",
         "@commitlint/config-conventional": "21.2.0",
         "prettier": "3.9.4",
       },
@@ -90,7 +90,7 @@
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.5.3", "", { "os": "win32", "cpu": "x64" }, "sha512-ExSaJWi4/u6+GXCszlSKpWSjKNbDseAYqqkCznsCsZ/4uidZ/BEqsCc5/3ctlq6dfIubdIIRSVLC/PG9xPl70Q=="],
 
-    "@commitlint/cli": ["@commitlint/cli@21.2.0", "", { "dependencies": { "@commitlint/config-conventional": "^21.2.0", "@commitlint/format": "^21.2.0", "@commitlint/lint": "^21.2.0", "@commitlint/load": "^21.2.0", "@commitlint/read": "^21.2.0", "@commitlint/types": "^21.2.0", "tinyexec": "^1.0.0", "yargs": "^18.0.0" }, "bin": { "commitlint": "cli.js" } }, "sha512-4GLVIhUaT3c3GBlQ0GB80/5H3xXdn/Tgw4lrsuoOQVDu2wl4Xw0GuzSar8xZKSMv4H3xaKaQXmvH91GmdyYBZA=="],
+    "@commitlint/cli": ["@commitlint/cli@21.2.1", "", { "dependencies": { "@commitlint/config-conventional": "^21.2.0", "@commitlint/format": "^21.2.0", "@commitlint/lint": "^21.2.0", "@commitlint/load": "^21.2.0", "@commitlint/read": "^21.2.1", "@commitlint/types": "^21.2.0", "tinyexec": "^1.0.0", "yargs": "^18.0.0" }, "bin": { "commitlint": "cli.js" } }, "sha512-blsZGe29hJ72VGEFVl72IVYX+1vsfINpjA9yWQA6i7OKD/McGEOXg08sKIRKjFk4JvzhV/9n0l3i6NooPLTNfg=="],
 
     "@commitlint/config-conventional": ["@commitlint/config-conventional@21.2.0", "", { "dependencies": { "@commitlint/types": "^21.2.0", "conventional-changelog-conventionalcommits": "^10.0.0" } }, "sha512-Qf8WRDVcyVd14if6VTWenebxFbKnVnbzPUJjlzjkyJGeHK2xCGd63Dr1XZzj0plXKQb9P0BfOxoc1HVeCo2BWQ=="],
 
@@ -112,7 +112,7 @@
 
     "@commitlint/parse": ["@commitlint/parse@21.2.0", "", { "dependencies": { "@commitlint/types": "^21.2.0", "conventional-changelog-angular": "^9.0.0", "conventional-commits-parser": "^7.0.0" } }, "sha512-QHWxG4d0PLTF634/AdyZ0MQS+CLn5YOuJlCFhMMlSGKFxzYGUetkHBj18xgBD+6fVzUrA2lrCdi/vlS2f/oYXg=="],
 
-    "@commitlint/read": ["@commitlint/read@21.2.0", "", { "dependencies": { "@commitlint/top-level": "^21.2.0", "@commitlint/types": "^21.2.0", "git-raw-commits": "^5.0.0", "tinyexec": "^1.0.0" } }, "sha512-ELx8Ovh/JoAw5lpvDgxc6Y0We9skf2IPI2RFN+gnYgDGjRdMSF8zeodxhZmcclLWzfUIF7hXLOa8gOlllYcvBA=="],
+    "@commitlint/read": ["@commitlint/read@21.2.1", "", { "dependencies": { "@commitlint/top-level": "^21.2.0", "@commitlint/types": "^21.2.0", "@conventional-changelog/git-client": "^3.0.0", "tinyexec": "^1.0.0" } }, "sha512-hUW7EJQnNTL0vPOmVMNK4CrnrNBN0nN+JJHReFkdHO5y4iyHeEmTBwuC15OCqUTjxWo7idnH1LftfpWVIaPWIA=="],
 
     "@commitlint/resolve-extends": ["@commitlint/resolve-extends@21.2.0", "", { "dependencies": { "@commitlint/config-validator": "^21.2.0", "@commitlint/types": "^21.2.0", "es-toolkit": "^1.46.0", "global-directory": "^5.0.0", "resolve-from": "^5.0.0" } }, "sha512-4O/1j51+79Wth9s/MGxt/5gs0XYLDgNlYpltQfhAvLE0itusLKs9zruxbiNg1oOkmkb9L9L4USYGjEj7n87NxA=="],
 
@@ -124,7 +124,7 @@
 
     "@commitlint/types": ["@commitlint/types@21.2.0", "", { "dependencies": { "conventional-commits-parser": "^7.0.0", "picocolors": "^1.1.1" } }, "sha512-7zVFCDB2reMvJH5dmbKnOQPjZEvjdJTH8jc0U/PIPU1r3/+vf5pD1HlfitV2MWsWXrvu7u39iY1lyLUPOaN0Gw=="],
 
-    "@conventional-changelog/git-client": ["@conventional-changelog/git-client@2.7.0", "", { "dependencies": { "@simple-libs/child-process-utils": "^1.0.0", "@simple-libs/stream-utils": "^1.2.0", "semver": "^7.5.2" }, "peerDependencies": { "conventional-commits-filter": "^5.0.0", "conventional-commits-parser": "^6.4.0" }, "optionalPeers": ["conventional-commits-filter", "conventional-commits-parser"] }, "sha512-j7A8/LBEQ+3rugMzPXoKYzyUPpw/0CBQCyvtTR7Lmu4olG4yRC/Tfkq79Mr3yuPs0SUitlO2HwGP3gitMJnRFw=="],
+    "@conventional-changelog/git-client": ["@conventional-changelog/git-client@3.1.0", "", { "dependencies": { "@simple-libs/child-process-utils": "^2.0.0", "@simple-libs/stream-utils": "^2.0.0", "semver": "^7.5.2" }, "peerDependencies": { "conventional-commits-filter": "^6.0.1", "conventional-commits-parser": "^7.0.1" }, "optionalPeers": ["conventional-commits-filter", "conventional-commits-parser"] }, "sha512-Tqa/gHco2WJWa740NRjOrfKVvzIqxkZpecb8bemaQ8sKM5PXb1UK4uTyTb/1wIqNuOVaDOFxyBdhTIQZn6gdjQ=="],
 
     "@conventional-changelog/template": ["@conventional-changelog/template@1.2.1", "", {}, "sha512-TzlTVpKPjaqW6qOYjQcYUDuGsLCNsvFHVBXkYGTAnf5V37jCWrE5haKNXzz0WZUtVHjrpV76L1buANjwXMfT8w=="],
 
@@ -198,7 +198,7 @@
 
     "@shikijs/vscode-textmate": ["@shikijs/vscode-textmate@10.0.2", "", {}, "sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg=="],
 
-    "@simple-libs/child-process-utils": ["@simple-libs/child-process-utils@1.0.2", "", { "dependencies": { "@simple-libs/stream-utils": "^1.2.0" } }, "sha512-/4R8QKnd/8agJynkNdJmNw2MBxuFTRcNFnE5Sg/G+jkSsV8/UBgULMzhizWWW42p8L5H7flImV2ATi79Ove2Tw=="],
+    "@simple-libs/child-process-utils": ["@simple-libs/child-process-utils@2.0.0", "", { "dependencies": { "@simple-libs/stream-utils": "^2.0.0" } }, "sha512-dvNoRKLijXnD0XoJAz94pbNuB5GQgDr55UhpSPhffDkTT0Cmcqh9jSCOtwfT2d4H6MI9E7c4SgtMuJXZ6F3c6A=="],
 
     "@simple-libs/stream-utils": ["@simple-libs/stream-utils@2.0.0", "", {}, "sha512-fCTuZK4QBa+39Oz9l4OGfJfz+GpwCp3AqO7Zch3to99xHPgstVsRFpeQ8LNd2o1Gv8raL2mCFwiaHh7bFSp5DQ=="],
 
@@ -362,8 +362,6 @@
 
     "get-east-asian-width": ["get-east-asian-width@1.6.0", "", {}, "sha512-QRbvDIbx6YklUe6RxeTeleMR0yv3cYH6PsPZHcnVn7xv7zO1BHN8r0XETu8n6Ye3Q+ahtSarc3WgtNWmehIBfA=="],
 
-    "git-raw-commits": ["git-raw-commits@5.0.1", "", { "dependencies": { "@conventional-changelog/git-client": "^2.6.0", "meow": "^13.0.0" }, "bin": { "git-raw-commits": "src/cli.js" } }, "sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ=="],
-
     "github-slugger": ["github-slugger@2.0.0", "", {}, "sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw=="],
 
     "glob-parent": ["glob-parent@5.1.2", "", { "dependencies": { "is-glob": "^4.0.1" } }, "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow=="],
@@ -490,7 +488,7 @@
 
     "medium-zoom": ["medium-zoom@1.1.0", "", {}, "sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ=="],
 
-    "meow": ["meow@13.2.0", "", {}, "sha512-pxQJQzB6djGPXh08dacEloMFopsOqGVRKFPYvPOt9XDZ1HasbgDZA74CJGreSU4G3Ak7EFJGoiH2auq+yXISgA=="],
+    "meow": ["meow@14.1.0", "", {}, "sha512-EDYo6VlmtnumlcBCbh1gLJ//9jvM/ndXHfVXIFrZVr6fGcwTUyCTFNTLCKuY3ffbK8L/+3Mzqnd58RojiZqHVw=="],
 
     "micromark": ["micromark@4.0.2", "", { "dependencies": { "@types/debug": "^4.0.0", "debug": "^4.0.0", "decode-named-character-reference": "^1.0.0", "devlop": "^1.0.0", "micromark-core-commonmark": "^2.0.0", "micromark-factory-space": "^2.0.0", "micromark-util-character": "^2.0.0", "micromark-util-chunked": "^2.0.0", "micromark-util-combine-extensions": "^2.0.0", "micromark-util-decode-numeric-character-reference": "^2.0.0", "micromark-util-encode": "^2.0.0", "micromark-util-normalize-identifier": "^2.0.0", "micromark-util-resolve-all": "^2.0.0", "micromark-util-sanitize-uri": "^2.0.0", "micromark-util-subtokenize": "^2.0.0", "micromark-util-symbol": "^2.0.0", "micromark-util-types": "^2.0.0" } }, "sha512-zpe98Q6kvavpCr1NPVSCMebCKfD7CA2NqZ+rykeNhONIJBpc1tFKt9hucLGwha3jNTNI8lHpctWJWoimVF4PfA=="],
 
@@ -748,8 +746,6 @@
 
     "zwitch": ["zwitch@2.0.4", "", {}, "sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A=="],
 
-    "@conventional-changelog/git-client/@simple-libs/stream-utils": ["@simple-libs/stream-utils@1.2.0", "", {}, "sha512-KxXvfapcixpz6rVEB6HPjOUZT22yN6v0vI0urQSk1L8MlEWPDFCZkhw2xmkyoTGYeFw7tWTZd7e3lVzRZRN/EA=="],
-
     "@rspress/core/@rsbuild/core": ["@rsbuild/core@2.0.0-beta.11", "", { "dependencies": { "@rspack/core": "2.0.0-beta.9", "@swc/helpers": "^0.5.20" }, "peerDependencies": { "core-js": ">= 3.0.0" }, "optionalPeers": ["core-js"], "bin": { "rsbuild": "bin/rsbuild.js" } }, "sha512-IBbQx7SrnSpD7j2p2qyq3qDxoqmG4E6lcflTpbBitX6iUrzpVRQbP4rktXZ2iuY7ph9+FtUK/SVAVA+Ocm3Nig=="],
 
     "@rspress/core/react": ["react@19.2.7", "", {}, "sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ=="],
@@ -758,11 +754,7 @@
 
     "@rspress/shared/@rsbuild/core": ["@rsbuild/core@2.0.0-beta.11", "", { "dependencies": { "@rspack/core": "2.0.0-beta.9", "@swc/helpers": "^0.5.20" }, "peerDependencies": { "core-js": ">= 3.0.0" }, "optionalPeers": ["core-js"], "bin": { "rsbuild": "bin/rsbuild.js" } }, "sha512-IBbQx7SrnSpD7j2p2qyq3qDxoqmG4E6lcflTpbBitX6iUrzpVRQbP4rktXZ2iuY7ph9+FtUK/SVAVA+Ocm3Nig=="],
 
-    "@simple-libs/child-process-utils/@simple-libs/stream-utils": ["@simple-libs/stream-utils@1.2.0", "", {}, "sha512-KxXvfapcixpz6rVEB6HPjOUZT22yN6v0vI0urQSk1L8MlEWPDFCZkhw2xmkyoTGYeFw7tWTZd7e3lVzRZRN/EA=="],
-
     "anymatch/picomatch": ["picomatch@2.3.2", "", {}, "sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA=="],
-
-    "conventional-commits-parser/meow": ["meow@14.1.0", "", {}, "sha512-EDYo6VlmtnumlcBCbh1gLJ//9jvM/ndXHfVXIFrZVr6fGcwTUyCTFNTLCKuY3ffbK8L/+3Mzqnd58RojiZqHVw=="],
 
     "gray-matter/js-yaml": ["js-yaml@3.15.0", "", { "dependencies": { "argparse": "^1.0.7", "esprima": "^4.0.0" }, "bin": { "js-yaml": "bin/js-yaml.js" } }, "sha512-ttBQIIQPDeLjpPOohtUdXuXUVoA2uIB6fEH9HyJ7234s5mBJ5wTx20njxplLZQgLaOfpmPQA7X2t5AX6tIPbog=="],
 
