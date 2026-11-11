@@ -1,8 +1,0 @@
-# Auto-generated files that shouldn't be formatted
-CHANGELOG.md
-
-# Build outputs
-dist/
-doc_build/
-node_modules/
-.rspress/
