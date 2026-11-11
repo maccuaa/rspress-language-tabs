@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/maccuaa/rspress-language-tabs.git"
   },
+  "packageManager": "bun@1.4.4",
   "workspaces": [
     "packages/*"
   ],
@@ -21,18 +22,15 @@
     "build": "bun run --filter rspress-language-tabs build",
     "build:all": "bun run --filter '*' build",
     "dev": "bun run --filter rspress-language-tabs dev",
-    "lint": "bun run lint:js && bun run lint:md",
-    "lint:js": "biome ci .",
+    "lint": "bun run format:check && bun run lint:js",
+    "lint:js": "biome lint .",
     "lint:commits": "commitlint --from-last-tag --to HEAD --verbose",
-    "lint:md": "prettier --check '**/*.{md,mdx}'",
-    "format": "bun run format:biome && bun run format:prettier",
-    "format:biome": "biome format --write .",
-    "format:prettier": "prettier --write '**/*.{md,mdx}'"
+    "format": "bun fmt",
+    "format:check": "bun fmt --check"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "@commitlint/cli": "21.2.4",
-    "@commitlint/config-conventional": "21.2.4",
-    "prettier": "3.9.10"
+    "@commitlint/config-conventional": "21.2.4"
   }
 }

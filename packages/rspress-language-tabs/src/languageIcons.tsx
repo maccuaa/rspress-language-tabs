@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import {
-  type SimpleIcon,
   siApachegroovy,
   siBun,
   siC,
@@ -21,6 +20,7 @@ import {
   siLess,
   siLua,
   siMarkdown,
+  type SimpleIcon,
   siMysql,
   siNim,
   siOcaml,
