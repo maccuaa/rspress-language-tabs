@@ -19,7 +19,7 @@
       "devDependencies": {
         "@rslib/core": "1.0.6",
         "@rspress/core": "catalog:",
-        "@tsconfig/node-lts": "24.0.1",
+        "@tsconfig/node-lts": "26.0.1",
         "@types/node": "26.6.6",
         "@types/react": "19.3.0",
         "react": "catalog:",
@@ -211,7 +211,7 @@
 
     "@swc/helpers": ["@swc/helpers@0.5.24", "", {}, "sha512-6tcXo4kA8HgGO7AVmawB57RYi/piBPYVHVcO6dXjX+SZw8GoHmi262sp4v2Ha2kNP9Cx84qei27yT+fjS1lxgg=="],
 
-    "@tsconfig/node-lts": ["@tsconfig/node-lts@24.0.1", "", {}, "sha512-xo+1KtV5zVb90fyyeglG1n5cqg3cQXLlCkEpLptYlZUNk28xmwhuD5GmxoXwmrVtUTvaMyclun9kAd0TK7H+Pg=="],
+    "@tsconfig/node-lts": ["@tsconfig/node-lts@26.0.1", "", {}, "sha512-Z8DWX8MgVR006YMHZYf7d2lzWMBfYAhW4lMyhdeMG9+KGAgbJuGYuoWOAlYipfggCkiHCAZVm/Wiw6IuG5lcnw=="],
 
     "@tybys/wasm-util": ["@tybys/wasm-util@0.10.4", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A=="],
 
