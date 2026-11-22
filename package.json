@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/maccuaa/rspress-language-tabs.git"
   },
-  "packageManager": "bun@1.4.4",
+  "packageManager": "bun@1.4.5",
   "workspaces": [
     "packages/*"
   ],
